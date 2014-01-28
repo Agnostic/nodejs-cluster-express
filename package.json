@@ -1,5 +1,13 @@
 {
-    "name": "Clickbalance-Application-Cluster",
+    "name": "nodejs-cluster-express",
+    "description": "Scalable web-applications using the Cluster API and Workers.",
+    "homepage": "https://github.com/Agnostic/nodejs-cluster-express",
+    "keywords": "cluster, workers, scalable, boilerplate, expresss, balancer",
+    "person": {
+      "name" : "Gilberto Avalos",
+      "email" : "avalosagnostic@gmail.com",
+      "url" : "http://github.com/Agnostic"
+    },
     "version": "0.0.1",
     "dependencies": {
         "express": "~3.4",
