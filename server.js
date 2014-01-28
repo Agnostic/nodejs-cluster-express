@@ -51,10 +51,12 @@ if (cluster.isMaster) {
     };
 
     // Watch version file
-    fs.watchFile(__dirname + '/' + config.fileToWatch, function(cur, prev){
-        console.log('New version found!, reloading workers...');
-        reloadWorkers();
-    });
+    if(config.fileToWatch){
+        fs.watchFile(__dirname + '/' + config.fileToWatch, function(cur, prev){
+            console.log('New version found!, reloading workers...');
+            reloadWorkers();
+        });
+    }
 
     // Create a worker for each CPU
     for (var i = 0; i < max_workers; i++) {
